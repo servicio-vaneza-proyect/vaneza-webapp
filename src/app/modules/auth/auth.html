@@ -1,0 +1,15 @@
+<div class="auth-container">
+  <!-- Login Component -->
+  <app-sign-in 
+    *ngIf="currentView === 'login'"
+    (loginSubmit)="onLoginSubmit($event)"
+    (switchToRegister)="switchToRegister()">
+  </app-sign-in>
+
+  <!-- Register Component -->
+  <app-sign-up 
+    *ngIf="currentView === 'register'"
+    (registerSubmit)="onRegisterSubmit($event)"
+    (switchToLogin)="switchToLogin()">
+  </app-sign-up>
+</div>
